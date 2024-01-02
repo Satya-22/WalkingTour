@@ -1,1 +1,2 @@
 # WalkingTour
+# WalkingTours
