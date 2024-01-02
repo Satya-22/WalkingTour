@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/optionsLayout"
+        tools:context=".MapsActivity"/>
+
+    <LinearLayout
+        android:id="@+id/optionsLayout"
+        android:background="#007236"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="831s,South Bishop Street,Chicago,Illinois"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:padding="16dp"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:useDefaultMargins="false">
+
+            <CheckBox
+                android:id="@+id/Addresses"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Addresses"
+                android:checked="true"
+                android:buttonTint="@android:color/white"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"/>
+
+            <CheckBox
+                android:id="@+id/TravelPath"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Travel Path"
+                android:checked="true"
+                android:buttonTint="@android:color/white"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"/>
+
+            <CheckBox
+                android:id="@+id/Geofences"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Geofences"
+                android:checked="true"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"/>
+
+            <CheckBox
+                android:id="@+id/TourPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Tour Path"
+                android:checked="true"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"/>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
